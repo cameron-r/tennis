@@ -8,17 +8,27 @@ import static org.junit.Assert.*;
 public class ScoreTest {
 
     @Test
-    public void shouldStringifyTo15WhenScoreIs15() {
-        Score score = new Score(15);
+    public void shouldStringifyTo0WhenScoreIs0() {
+        Score score = new Score(0);
+
+        assertThat(score.toString(), is("0"));
+    }
+
+    @Test
+    public void shouldIncreaseScoreBy15WhenPointIsWon() {
+        Score score = new Score(0);
+
+        score.winsPoint();
 
         assertThat(score.toString(), is("15"));
     }
 
     @Test
-    public void shouldBeTotalOfInitialAmountAndIncrease() {
-        Score score = new Score(1);
-        score.increaseBy(2);
+    public void shouldIncreaseBy10WhenScoreIs30AndPointIsWon() {
+        Score score = new Score(30);
 
-        assertThat(score.toString(), is("3"));
+        score.winsPoint();
+
+        assertThat(score.toString(), is("40"));
     }
 }

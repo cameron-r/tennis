@@ -14,11 +14,11 @@ public class ScoreBoard {
     }
 
     public void player1Scores() {
-        player1Score.increaseBy(15);
+        player1Score.winsPoint();
     }
 
     public void player2Scores() {
-        player2Score.increaseBy(15);
+        player2Score.winsPoint();
     }
 
     public void report() {

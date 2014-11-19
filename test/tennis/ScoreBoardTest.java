@@ -48,14 +48,14 @@ public class ScoreBoardTest {
     public void shouldIncreasePlayerOnesScoreBy15WhenTheyWinAPoint() {
         scoreBoard.player1Scores();
 
-        verify(player1Score).increaseBy(15);
+        verify(player1Score).winsPoint();
     }
 
     @Test
     public void shouldIncreasePlayerTwosScoreBy15WhenTheyWinAPoint() {
         scoreBoard.player2Scores();
 
-        verify(player2Score).increaseBy(15);
+        verify(player2Score).winsPoint();
     }
 
 }

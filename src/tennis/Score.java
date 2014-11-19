@@ -9,8 +9,13 @@ public class Score {
         this.total = total;
     }
 
-    public void increaseBy(int amount) {
-        total += amount;
+    public void winsPoint() {
+        int increase = 15;
+        if (total == 30){
+            increase = 10;
+        }
+
+        total += increase;
     }
 
     @Override
