@@ -9,6 +9,7 @@ public class Game {
     }
 
     public void score(String points) {
+//        while(!scoreBoard.hasWinner())
         for (String point : points.split("")) {
             if (point.equals("1")){
                 scoreBoard.player1Scores();
